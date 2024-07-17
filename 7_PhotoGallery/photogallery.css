@@ -1,0 +1,76 @@
+/* .gallery {
+    width: 50%;
+    border: 5px solid red;
+} */
+/* img {
+    width: 100%;
+    padding: 5px;
+    border: 5px solid blue;
+} */
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f5f6f7;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+}
+
+#bg-image {
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#bg-image::before{
+    background-color: #0a0a2391;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+
+.gallery {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery::after {
+    content: "";
+    width: 350px;
+    height: 300px;
+    background-color: red;
+}
+
+
